@@ -7,6 +7,7 @@ const SideBar = () => {
   return (
     <div className="shadow-xl h-screen">
       <SideBarItem name="Home"></SideBarItem>
+
       <SideBarItem name="Shorts"></SideBarItem>
       <SideBarItem name="Subscriptions"></SideBarItem>
       <div className="border border-gray-500 mx-2"></div>

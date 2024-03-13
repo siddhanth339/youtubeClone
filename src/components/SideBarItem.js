@@ -1,10 +1,13 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const SideBarItem = ({ name }) => {
   return (
-    <div className="p-2 m-2 hover:bg-gray-200 rounded-lg cursor-pointer">
-      {name}
-    </div>
+    <Link>
+      <div className="p-2 m-2 hover:bg-gray-200 rounded-lg cursor-pointer">
+        {name}
+      </div>
+    </Link>
   );
 };
 

@@ -16,3 +16,6 @@ export const YOUTUBE_MOST_POPULAR_VIDEOS =
 
 export const YOUTUBE_CHANNEL_API =
   "https://youtube.googleapis.com/youtube/v3/channels?part=snippet%2CcontentDetails%2Cstatistics&id=";
+
+export const YOUTUBE_SEARCH_SUGGESTIONS_API =
+  "https://corsproxy.io/?http://suggestqueries.google.com/complete/search?client=firefox&ds=yt&q=";

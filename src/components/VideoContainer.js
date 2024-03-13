@@ -20,8 +20,11 @@ const VideoContainer = () => {
   return (
     <div className="flex flex-wrap">
       {videos.items.map((video) => {
-        //video.id
-        return <VideoCard videoDetails={video} />;
+        return (
+          <Link to={"/watch?v=" + video.id}>
+            <VideoCard videoDetails={video} />
+          </Link>
+        );
       })}
     </div>
   );

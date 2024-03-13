@@ -5,16 +5,15 @@ import appStore from "./utils/appStore";
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
 import WatchContainer from "./components/WatchContainer";
 import SideBar from "./components/SideBar";
+import MainContainer from "./components/MainContainer";
 
 function App() {
   return (
     <Provider store={appStore}>
       <div className="App">
         <Header />
-        <div className="flex">
-          <SideBar />
-          <RouterProvider router={appRouter} />
-        </div>
+
+        <RouterProvider router={appRouter} />
       </div>
     </Provider>
   );
@@ -24,10 +23,16 @@ const appRouter = createBrowserRouter([
   {
     path: "/",
     element: <Body />,
-  },
-  {
-    path: "/watch",
-    element: <WatchContainer />,
+    children: [
+      {
+        path: "/",
+        element: <MainContainer />,
+      },
+      {
+        path: "/watch",
+        element: <WatchContainer />,
+      },
+    ],
   },
 ]);
 
