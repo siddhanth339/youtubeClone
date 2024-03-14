@@ -19,3 +19,130 @@ export const YOUTUBE_CHANNEL_API =
 
 export const YOUTUBE_SEARCH_SUGGESTIONS_API =
   "https://corsproxy.io/?http://suggestqueries.google.com/complete/search?client=firefox&ds=yt&q=";
+
+export const COMMENTS = [
+  {
+    name: "Siddhanth",
+    text: "Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur",
+    replies: [
+      {
+        name: "Siddhanth",
+        text: "Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur",
+        replies: [
+          {
+            name: "Siddhanth",
+            text: "Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur",
+            replies: [],
+          },
+          {
+            name: "Siddhanth",
+            text: "Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur",
+            replies: [],
+          },
+        ],
+      },
+      {
+        name: "Siddhanth",
+        text: "Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur",
+        replies: [],
+      },
+      {
+        name: "Siddhanth",
+        text: "Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur",
+        replies: [],
+      },
+    ],
+  },
+  {
+    name: "Siddhanth",
+    text: "Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur",
+    replies: [],
+  },
+  {
+    name: "Siddhanth",
+    text: "Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur",
+    replies: [],
+  },
+  {
+    name: "Siddhanth",
+    text: "Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur",
+    replies: [],
+  },
+  {
+    name: "Siddhanth",
+    text: "Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur",
+    replies: [],
+  },
+  {
+    name: "Siddhanth",
+    text: "Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur",
+    replies: [],
+  },
+  {
+    name: "Siddhanth",
+    text: "Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur",
+    replies: [],
+  },
+  {
+    name: "Siddhanth",
+    text: "Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur",
+    replies: [],
+  },
+  {
+    name: "Siddhanth",
+    text: "Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur",
+    replies: [
+      {
+        name: "Siddhanth",
+        text: "Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur",
+        replies: [],
+      },
+      {
+        name: "Siddhanth",
+        text: "Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur",
+        replies: [
+          {
+            name: "Siddhanth",
+            text: "Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur",
+            replies: [],
+          },
+          {
+            name: "Siddhanth",
+            text: "Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur",
+            replies: [],
+          },
+          {
+            name: "Siddhanth",
+            text: "Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur",
+            replies: [],
+          },
+        ],
+      },
+      {
+        name: "Siddhanth",
+        text: "Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur",
+        replies: [],
+      },
+      {
+        name: "Siddhanth",
+        text: "Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur",
+        replies: [],
+      },
+    ],
+  },
+  {
+    name: "Siddhanth",
+    text: "Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur",
+    replies: [],
+  },
+  {
+    name: "Siddhanth",
+    text: "Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur",
+    replies: [],
+  },
+  {
+    name: "Siddhanth",
+    text: "Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur",
+    replies: [],
+  },
+];

@@ -1,12 +1,15 @@
 import { useSelector } from "react-redux";
 import SideBarItem from "./SideBarItem";
+import { Link } from "react-router-dom";
 
 const SideBar = () => {
   const sideBarVisible = useSelector((store) => store.app.isMenuOpen);
   if (!sideBarVisible) return;
   return (
     <div className="shadow-xl h-screen mt-20">
-      <SideBarItem name="Home"></SideBarItem>
+      <Link to="/">
+        <SideBarItem name="Home"></SideBarItem>
+      </Link>
 
       <SideBarItem name="Shorts"></SideBarItem>
       <SideBarItem name="Subscriptions"></SideBarItem>

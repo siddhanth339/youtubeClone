@@ -53,7 +53,6 @@ const VideoCard = ({ videoDetails }) => {
             <img
               src={channelDetails.snippet.thumbnails.default.url}
               alt="channelIcon"
-              className=""
             />
           </div>
         )}
