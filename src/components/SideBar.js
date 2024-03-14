@@ -5,7 +5,7 @@ const SideBar = () => {
   const sideBarVisible = useSelector((store) => store.app.isMenuOpen);
   if (!sideBarVisible) return;
   return (
-    <div className="shadow-xl h-screen">
+    <div className="shadow-xl h-screen mt-20">
       <SideBarItem name="Home"></SideBarItem>
 
       <SideBarItem name="Shorts"></SideBarItem>

@@ -22,7 +22,6 @@ function formatNumber(number) {
 }
 
 const VideoCard = ({ videoDetails }) => {
-  console.log(videoDetails);
   const [channelDetails, setChannelDetails] = useState(null);
   const viewCount = formatNumber(videoDetails.statistics.viewCount);
   const channel = videoDetails.snippet.channelTitle;
@@ -43,7 +42,6 @@ const VideoCard = ({ videoDetails }) => {
     );
     const json = await channelData.json();
     setChannelDetails(json.items[0]);
-    console.log(json.items[0]);
   }
 
   return (
