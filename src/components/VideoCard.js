@@ -23,7 +23,7 @@ function formatNumber(number) {
 
 const VideoCard = ({ videoDetails }) => {
   const [channelDetails, setChannelDetails] = useState(null);
-  const viewCount = formatNumber(videoDetails.statistics.viewCount);
+  const viewCount = formatNumber(videoDetails?.statistics?.viewCount);
   const channel = videoDetails.snippet.channelTitle;
   const title = videoDetails.snippet.title;
   const thumbnail = videoDetails.snippet.thumbnails?.medium.url;
@@ -49,7 +49,7 @@ const VideoCard = ({ videoDetails }) => {
       <img src={thumbnail} alt="thumbnail" className="rounded-lg" />
       <div className="flex">
         {channelDetails && (
-          <div class="">
+          <div>
             <img
               src={channelDetails.snippet.thumbnails.default.url}
               alt="channelIcon"

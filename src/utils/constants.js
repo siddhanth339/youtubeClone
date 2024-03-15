@@ -20,6 +20,9 @@ export const YOUTUBE_CHANNEL_API =
 export const YOUTUBE_SEARCH_SUGGESTIONS_API =
   "https://corsproxy.io/?http://suggestqueries.google.com/complete/search?client=firefox&ds=yt&q=";
 
+export const YOUTUBE_SEARCH_RESULTS_API =
+  "https://youtube.googleapis.com/youtube/v3/search?part=snippet&maxResults=25&q=";
+
 export const COMMENTS = [
   {
     name: "Siddhanth",

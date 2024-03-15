@@ -3,16 +3,19 @@ import {
   HAMBURGER_ICON,
   USER_ICON,
   YOUTUBE_LOGO,
+  YOUTUBE_SEARCH_RESULTS_API,
   YOUTUBE_SEARCH_SUGGESTIONS_API,
 } from "../utils/constants";
 import { toggleMenu } from "../utils/appSlice";
 import { useEffect, useState } from "react";
 import { updateSearchResultCache } from "../utils/searchSlice";
+import { Link } from "react-router-dom";
 
 const Header = () => {
   const dispatch = useDispatch();
   const [searchQuery, setSearchQuery] = useState("");
   const [suggestions, setSuggestions] = useState([]);
+  const [suggestionsVisible, setSuggestionsVisible] = useState([]);
   const handleClick = () => {
     dispatch(toggleMenu());
   };
@@ -21,6 +24,11 @@ const Header = () => {
   };
   const searchResultCache = useSelector((store) => store.searchResultCache);
   useEffect(() => {
+    console.log(" useEffect");
+    setSuggestionsVisible(false);
+  }, []);
+  useEffect(() => {
+    console.log("search query useEffect");
     const timer = setTimeout(() => {
       if (searchResultCache[searchQuery]) {
         setSuggestions(searchResultCache[searchQuery]);
@@ -47,7 +55,7 @@ const Header = () => {
   };
 
   return (
-    <div className="grid grid-flow-col shadow-lg absolute z-50 w-full">
+    <div className="grid grid-flow-col shadow-lg fixed w-full bg-white ">
       <div className="flex col-span-1">
         <button onClick={handleClick}>
           <img
@@ -66,13 +74,19 @@ const Header = () => {
           placeholder="Search"
           value={searchQuery}
           onChange={handleChange}
+          onFocus={() => setSuggestionsVisible(true)}
         ></input>
-        {searchQuery.length !== 0 && (
-          <ul className="m-2 p-2 absolute bg-white border rounded-xl shadow-xl w-[50%]">
+        {suggestionsVisible && searchQuery.length !== 0 && (
+          <ul
+            className="m-2 p-2 absolute bg-white border rounded-xl shadow-xl w-[50%]"
+            onBlur={() => setSuggestionsVisible(false)}
+          >
             {suggestions.map((s) => (
-              <li className="px-2 hover:bg-gray-100 rounded-sm" key={s}>
-                {s}
-              </li>
+              <Link key={s} to={"/results?search_query=" + s}>
+                <li className="px-2 hover:bg-gray-100 rounded-sm" key={s}>
+                  {s}
+                </li>
+              </Link>
             ))}
           </ul>
         )}
