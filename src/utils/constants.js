@@ -23,6 +23,8 @@ export const YOUTUBE_SEARCH_SUGGESTIONS_API =
 export const YOUTUBE_SEARCH_RESULTS_API =
   "https://youtube.googleapis.com/youtube/v3/search?part=snippet&maxResults=25&q=";
 
+export const LIVECHAT_MESSAGES_LIMIT = 20;
+
 export const COMMENTS = [
   {
     name: "Siddhanth",
