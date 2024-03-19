@@ -12,8 +12,8 @@ const SearchResults = () => {
     retrieveSearchResults();
   }, [searchQuery]);
 
+  // retrieve search result "videos"
   async function retrieveSearchResults() {
-    console.log(searchQuery);
     const data = await fetch(
       YOUTUBE_SEARCH_RESULTS_API +
         searchQuery +
@@ -21,7 +21,6 @@ const SearchResults = () => {
         process.env.REACT_APP_YOUTUBE_DATA_API_KEY
     );
     const searchResult = await data.json();
-    console.log(searchResult.items);
     setVideos(searchResult.items);
   }
 

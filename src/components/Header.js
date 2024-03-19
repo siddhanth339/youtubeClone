@@ -24,11 +24,9 @@ const Header = () => {
   };
   const searchResultCache = useSelector((store) => store.searchResultCache);
   useEffect(() => {
-    console.log(" useEffect");
     setSuggestionsVisible(false);
   }, []);
   useEffect(() => {
-    console.log("search query useEffect");
     const timer = setTimeout(() => {
       if (searchResultCache[searchQuery]) {
         setSuggestions(searchResultCache[searchQuery]);
@@ -39,18 +37,15 @@ const Header = () => {
     };
   }, [searchQuery]);
 
+  // retrieve search suggestions in "text"
   const getSearchSuggestions = async () => {
-    console.log("making an API call");
     const data = await fetch(YOUTUBE_SEARCH_SUGGESTIONS_API + searchQuery);
     const suggestions = await data.json();
     setSuggestions(suggestions[1]);
     dispatch(
-      updateSearchResultCache(
-        {
-          [searchQuery]: suggestions[1],
-        },
-        [searchQuery]
-      )
+      updateSearchResultCache({
+        [searchQuery]: suggestions[1],
+      })
     );
   };
 
